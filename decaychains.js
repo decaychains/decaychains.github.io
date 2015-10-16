@@ -1,6 +1,15 @@
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+</style>
+/*
 (function() {
 
-  
+
   var app = angular.module('decaychains');
 
   
@@ -16,3 +25,4 @@
     
     
 })();
+*/
