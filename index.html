@@ -4,26 +4,145 @@
 <html lang="en-US">
   <head>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-  <!--  <script src="decaychains.js"></script>-->
+    <!--  <script src="decaychains.js"></script>-->
     <style>
-      #header {
+      div.header {
+      font-size:auto;
+      font-family:sans-serif;
       text-align:center;
-      padding:1px; 
+      padding:1px;
       }
+      div.relative {
+      font-size:auto;
+      font-family:sans-serif;
+      font-weight:bold;
+      position: relative;
+      width: 700px;
+      height: 1000px;
+      overflow: hidden;
+      white-space: nowrap;
+      } 
+      div.alpha {
+      position: absolute;
+      top: 100%;
+      right: 100%;
+      width: 0px;
+      height: 0px;
+      }
+      div.beta {
+      position: absolute;
+      top: 0%;
+      right: 131%;
+      width: 0px;
+      height: 0px;
+      }
+      div.gamma {
+      position: absolute;
+      top: 40%;
+      right: 5%;
+      width: 0px;
+      height: 0px;
+      }
+
+      div.U-238 {
+      position: absolute;
+      font-size:10pt;
+      font-family:sans-serif;
+      font-weight:bold;
+      top: 0%;
+      right: 0%;
+      width: auto;
+      min-width: 50px;
+      height: auto;
+      border-radius: 10px;
+      padding: 5px;
+      background: #CCEEEE;
+      text-align: center;
+      }
+
+      div.alphadaughter {
+      position: absolute;
+      top: 200%;
+      right: 80%;
+      width: auto;
+      min-width: 50px;
+      height: auto;
+      border-radius: 10px;
+      padding: 5px;
+      background: #CCEEEE;
+      }
+
+      div.betadaughter {
+      position: absolute;
+      top: -100%;
+      right: 60%;
+      width: auto;
+      min-width: 50px;
+      height: auto;
+      border-radius: 10px;
+      padding: 5px;
+      background: #CCEEEE;
+      }
+
     </style>
   </head>
-  
+
   <body>
-    <div id="header">
+    <div class="header">
       <h1>Decay Chains</h1>
     </div>
-    <div ng-app="">
-      <p>Name : <input type="text" ng-model="name"></p>
-      <h1>Hello {{name}}</h1>
+
+    <div class="relative">Uranium Series
+      <div class="U-238">U-238<br>4.5E9 yr
+	<div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+	<div class="alphadaughter">Th-234<br>24 day
+	  <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+	  <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+	  <div class="betadaughter">Pa-234<br>1.2 min
+            <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+            <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+            <div class="betadaughter">U-234<br>2.5E5 yr
+              <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+              <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+              <div class="alphadaughter">Th-230<br>8E4 yr
+		<div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+		<div class="alphadaughter">Ra-226<br>1600 yr
+		  <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+		  <div class="alphadaughter">Rn-222<br>3.8 day
+                    <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+                    <div class="alphadaughter">Po-218<br>3 min
+                      <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+                      <div class="alphadaughter">Pb-214<br>27 min
+			<div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+			<div class="betadaughter">Bi-214<br>20 min
+			  <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+			  <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+			  <div class="betadaughter">Po-214<br>160 &#956s
+                            <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+                            <div class="alphadaughter">Pb-210<br>22 yr
+                              <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+                              <div class="betadaughter">Bi-210<br>5 day
+				<div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+				<div class="betadaughter">Po-210<br>138 day
+				  <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+				  <div class="alphadaughter">Pb-210<br>Stable</div>
+				</div>
+                              </div>
+                            </div>
+			  </div>
+			</div>
+                      </div>
+                    </div>
+		  </div>
+		</div>
+              </div>
+            </div>
+	  </div>
+	</div>
+      </div>
+      
     </div>
-    
-    <img src="img/Arrow_90_Orange.svg"/>
-    <img src="img/Arrow_ZigZag_Green.svg"/>
-    <img src="img/Arrow_Straight_Blue.svg"/>
+
+
   </body>
 </html>
