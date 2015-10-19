@@ -4,175 +4,175 @@
 <html lang="en-US">
   <head>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <!--  <script src="decaychains.js"></script>-->
+  <!--  <script src="decaychains.js"></script>-->
     <style>
-      div.header {
-      font-size:auto;
-      font-family:sans-serif;
+div.header {
+    font-size:auto;
+    font-family:sans-serif;
       text-align:center;
       padding:1px;
       }
-      div.relative {
-      font-size:auto;
-      font-family:sans-serif;
-      font-weight:bold;
-      position: relative;
-      width: 700px;
-      height: 500px;
-      overflow: hidden;
-      white-space: nowrap;
-      } 
-      div.legend {
-      font-size:auto;
-      font-family:sans-serif;
-      font-weight:bold;
-      position: relative;
-      width: 20%;
-      height: 20%;
-      top: 10%;
-      left: 10%;
-      } 
+div.relative {
+    font-size:auto;
+    font-family:sans-serif;
+    font-weight:bold;
+    position: relative;
+    width: 700px;
+    height: 500px;
+    overflow: hidden;
+    white-space: nowrap;
+} 
+div.legend {
+    font-size:auto;
+    font-family:sans-serif;
+    font-weight:bold;
+    position: relative;
+    width: 20%;
+    height: 20%;
+    top: 10%;
+    left: 10%;
+} 
 
 
-      div.alpha {
-      position: absolute;
-      top: 100%;
-      right: 100%;
-      width: 0px;
-      height: 0px;
-      }
-      div.beta {
-      position: absolute;
-      top: 0%;
-      right: 131%;
-      width: 0px;
-      height: 0px;
-      }
-      div.gamma {
-      position: absolute;
-      top: 40%;
-      right: 5%;
-      width: 0px;
-      height: 0px;
-      }
+div.alpha {
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    width: 0px;
+    height: 0px;
+}
+div.beta {
+    position: absolute;
+    top: 0%;
+    right: 131%;
+    width: 0px;
+    height: 0px;
+}
+div.gamma {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 0px;
+    height: 0px;
+}
 
-      div.U-238 {
-      position: absolute;
-      font-size:10pt;
-      font-family:sans-serif;
-      font-weight:bold;
-      top: 0%;
-      right: 0%;
-      width: auto;
-      min-width: 50px;
-      height: auto;
-      border-radius: 10px;
-      padding: 5px;
-      background: #DDDDFF;
-      text-align: center;
-      }
+div.U-238 {
+    position: absolute;
+    font-size:10pt;
+    font-family:sans-serif;
+    font-weight:bold;
+    top: 0%;
+    right: 0%;
+    width: auto;
+    min-width: 50px;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+    background: #DDDDFF;
+    text-align: center;
+}
 
-      div.alphadaughter {
-      position: absolute;
-      top: 200%;
-      right: 80%;
-      width: auto;
-      min-width: 50px;
-      height: auto;
-      border-radius: 10px;
-      padding: 5px;
-      background: #DDDDFF;
-      }
+div.alphadaughter {
+    position: absolute;
+    top: 200%;
+    right: 80%;
+    width: auto;
+    min-width: 50px;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+    background: #DDDDFF;
+}
 
-      div.betadaughter {
-      position: absolute;
-      top: -100%;
-      right: 60%;
-      width: auto;
-      min-width: 50px;
-      height: auto;
-      border-radius: 10px;
-      padding: 5px;
-      background: #DDDDFF;
-      }
-      div.legendalpha {
-      position: absolute;
-      left:-20%;
-      top: 0%;
-      }
-      div.legendbeta {
-      position: absolute;
-      left:-20%;
-      top: 33%;
-      }
-      div.legendgamma {
-      position: absolute;
-      left:-20%;
-      top: 66%;
-      }
-    </style>
-  </head>
+div.betadaughter {
+    position: absolute;
+    top: -100%;
+    right: 60%;
+    width: auto;
+    min-width: 50px;
+    height: auto;
+    border-radius: 10px;
+    padding: 5px;
+    background: #DDDDFF;
+}
+div.legendalpha {
+    position: absolute;
+    left:-21.2%;
+    top: -10%;
+}
+div.legendbeta {
+    position: absolute;
+    left:-22%;
+    top: 38%;
+}
+div.legendgamma {
+    position: absolute;
+    left:-30%;
+    top: 80%;
+}
+</style>
+</head>
 
-  <body>
-    <div class="header">
-      <h1>Decay Chains</h1>
-    </div>
+<body>
+<div class="header">
+<h1>Decay Chains</h1>
+</div>
 
-    <div class="relative">Uranium Series
-      <div class="legend">Alpha<br><br>Beta<br><br>Gamma
-	<div class="legendalpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="20"/></div>
-	<div class="legendbeta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="20"/></div>
-	<div class="legendgamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" height="20"/></div>
-      </div>
-      <div class="U-238">U-238<br>4.5E9 yr
-	<div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
-	<div class="alphadaughter">Th-234<br>24 day
-	  <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
-	  <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
-	  <div class="betadaughter">Pa-234<br>1.2 min
-            <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
-            <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
-            <div class="betadaughter">U-234<br>2.5E5 yr
-              <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+<div class="relative">Uranium Series
+  <div class="legend">Alpha<br><br>Beta<br><br>Gamma
+    <div class="legendalpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="35"/></div>
+    <div class="legendbeta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="23"/></div>
+    <div class="legendgamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" height="20"/></div>
+  </div>
+  <div class="U-238">U-238<br>4.5E9 yr
+    <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+    <div class="alphadaughter">Th-234<br>24 day
+      <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+      <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+      <div class="betadaughter">Pa-234<br>1.2 min
+        <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+        <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+        <div class="betadaughter">U-234<br>2.5E5 yr
+          <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+          <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+          <div class="alphadaughter">Th-230<br>8E4 yr
+            <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+            <div class="alphadaughter">Ra-226<br>1600 yr
               <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
-              <div class="alphadaughter">Th-230<br>8E4 yr
-		<div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
-		<div class="alphadaughter">Ra-226<br>1600 yr
-		  <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
-		  <div class="alphadaughter">Rn-222<br>3.8 day
-                    <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
-                    <div class="alphadaughter">Po-218<br>3 min
-                      <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
-                      <div class="alphadaughter">Pb-214<br>27 min
-			<div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
-			<div class="betadaughter">Bi-214<br>20 min
-			  <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
-			  <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
-			  <div class="betadaughter">Po-214<br>160 &#956s
-                            <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
-                            <div class="alphadaughter">Pb-210<br>22 yr
-                              <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
-                              <div class="betadaughter">Bi-210<br>5 day
-				<div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
-				<div class="betadaughter">Po-210<br>138 day
-				  <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
-				  <div class="alphadaughter">Pb-210<br>Stable</div>
-				</div>
-                              </div>
+              <div class="alphadaughter">Rn-222<br>3.8 day
+                <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+                <div class="alphadaughter">Po-218<br>3 min
+                  <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+                  <div class="alphadaughter">Pb-214<br>27 min
+                    <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+                    <div class="betadaughter">Bi-214<br>20 min
+                      <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+                      <div class="gamma"><img src="http://imgh.us/Arrow_ZigZag_Green_1.svg" width="25"/></div>
+                      <div class="betadaughter">Po-214<br>160 &#956s
+                        <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+                        <div class="alphadaughter">Pb-210<br>22 yr
+                          <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+                          <div class="betadaughter">Bi-210<br>5 day
+                            <div class="beta"><img src="http://imgh.us/Arrow_90_Orange.svg" height="25"/></div>
+                            <div class="betadaughter">Po-210<br>138 day
+                              <div class="alpha"><img src="http://imgh.us/Arrow_Straight_Blue.svg" height="44"/></div>
+                              <div class="alphadaughter">Pb-210<br>Stable</div>
                             </div>
-			  </div>
-			</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-		  </div>
-		</div>
+                  </div>
+                </div>
               </div>
             </div>
-	  </div>
-	</div>
+          </div>
+        </div>
       </div>
-      
     </div>
+  </div>
+  
+</div>
 
 
   </body>
